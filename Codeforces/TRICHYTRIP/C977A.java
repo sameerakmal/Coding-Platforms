@@ -1,4 +1,3 @@
-// Wrong subraction
 import java.util.Scanner;
 
 public class C977A {
