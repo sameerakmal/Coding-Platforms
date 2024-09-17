@@ -15,7 +15,7 @@ public class K {
         int b = scan.nextInt();
         int c = scan.nextInt();
         
-        System.out.println(Math.min(a, Math.min(b, c)));
+        System.out.print(Math.min(a, Math.min(b, c)) + " ");
         System.out.println(Math.max(a, Math.max(b, c)));
         scan.close();
     }
