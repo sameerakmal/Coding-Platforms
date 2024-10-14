@@ -7,7 +7,7 @@ public class L {
         int b = scan.nextInt();
         System.out.println(gcd(a, b));
         scan.close();
-    }
+    }    
 
     public static int gcd(int a, int b) {
         while (b != 0) {
