@@ -11,16 +11,16 @@ public class K {
         } catch (FileNotFoundException e) {
             scan = new Scanner(System.in);
         }
-        int size = scan.nextInt();
+
         int n = scan.nextInt();
+        String digits = scan.next();
         int sum = 0;
-        for (int i = 0; i < size; i++) {
-            
-            sum += n % 10;
-            n = n/10;
+
+        for (int i = 0; i < n; i++) {
+            sum += digits.charAt(i) - '0';
         }
+
         System.out.println(sum);
-        
         scan.close();
     }
 }
