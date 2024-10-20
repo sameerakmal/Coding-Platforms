@@ -2,7 +2,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class C492A {
+public class B {
     public static void main(String[] args) {
         Scanner scan = null;
         
@@ -12,17 +12,8 @@ public class C492A {
             scan = new Scanner(System.in);
         }
         
-        int n = scan.nextInt();
-        int sum = 0;
-        int cnt = 0;
-        for(int i = 1; ; i++ ){
-            sum += i*(i+1)/2;
-            if(sum > n) {
-                System.out.println(cnt);
-                break;
-            } 
-            cnt++;
-        }
+        // Your logic goes here, using 'scan' to read input
+        
         scan.close();
     }
 }

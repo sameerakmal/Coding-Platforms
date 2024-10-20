@@ -2,7 +2,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class C492A {
+public class A {
     public static void main(String[] args) {
         Scanner scan = null;
         
@@ -12,17 +12,13 @@ public class C492A {
             scan = new Scanner(System.in);
         }
         
-        int n = scan.nextInt();
-        int sum = 0;
-        int cnt = 0;
-        for(int i = 1; ; i++ ){
-            sum += i*(i+1)/2;
-            if(sum > n) {
-                System.out.println(cnt);
-                break;
-            } 
-            cnt++;
-        }
+        String s1 = scan.next();
+        String s2 = scan.next();
+
+        System.out.println(s1.length() + " " + s2.length());
+        System.out.println(s1 + " " + s2);
+        
+
         scan.close();
     }
 }
