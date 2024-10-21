@@ -2,7 +2,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class B {
+public class C1535A {
     public static void main(String[] args) {
         Scanner scan = null;
         
@@ -12,12 +12,18 @@ public class B {
             scan = new Scanner(System.in);
         }
         
-        String s = scan.nextLine();
-        int index = s.indexOf('\\');
-        if (index != -1) {
-            System.out.println(s.substring(0, index));
-        } else {
-            System.out.println(s);
+        int t = scan.nextInt();
+        while(t-- > 0){
+            int[] arr = new int[2];
+            int[] brr = new int[2];
+            for (int i = 0; i < 2; i++) {
+                arr[i] = scan.nextInt();
+            }
+            for (int i = 0; i < 2; i++) {
+                brr[i] = scan.nextInt();
+            }
+            
+
         }
         
         scan.close();
