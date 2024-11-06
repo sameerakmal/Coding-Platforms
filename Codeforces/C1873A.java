@@ -24,5 +24,6 @@ public class C1873A {
         }
         
         scan.close();
+        
     }
 }

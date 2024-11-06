@@ -2,7 +2,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class C1999A {
+public class C731A {
     public static void main(String[] args) {
         Scanner scan = null;
         
@@ -12,16 +12,16 @@ public class C1999A {
             scan = new Scanner(System.in);
         }
         
-        int t = scan.nextInt();
-        while(t-- > 0){
-            int n = scan.nextInt();
-            int sum = 0;
-            sum += n % 10;
-            n = n / 10;
-            sum += n % 10;
-            System.out.println(sum);
-            
+        String s = scan.next();
+        String s1 = "a" + s;
+        int sum = 0;
+        for (int i = 0; i < s.length(); i++) {
+            int len = Math.abs(s1.charAt(i) - s1.charAt(i+1));
+            int minlen = 26-len;
+            sum += Math.min(len, minlen);
         }
+        System.out.println(sum);
+        
         scan.close();
     }
 }

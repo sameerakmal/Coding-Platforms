@@ -2,7 +2,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class C1999A {
+public class C1985B {
     public static void main(String[] args) {
         Scanner scan = null;
         
@@ -13,15 +13,12 @@ public class C1999A {
         }
         
         int t = scan.nextInt();
-        while(t-- > 0){
+        while (t-- > 0) {
             int n = scan.nextInt();
-            int sum = 0;
-            sum += n % 10;
-            n = n / 10;
-            sum += n % 10;
-            System.out.println(sum);
-            
+            if(n == 3) System.out.println(3);
+            else System.out.println(2);
         }
+        
         scan.close();
     }
 }
