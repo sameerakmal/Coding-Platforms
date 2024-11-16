@@ -13,8 +13,15 @@ public class C1850C {
         }
         
         int t = scan.nextInt();
-        for(int i = 1; i <= 5; i++){
-            for(int j = 1; )
+        while (t-- > 0) {
+           StringBuilder ans = new StringBuilder();
+           for (int i = 0; i < 8; i++) {
+               String s = scan.next();
+               for(char c : s.toCharArray()){
+                    if(Character.isLetter(c)) ans.append(c);
+               }
+           }
+           System.out.println(ans);
         }
         
         scan.close();
