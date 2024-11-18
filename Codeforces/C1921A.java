@@ -25,9 +25,7 @@ public class C1921A {
             }
             int s = Math.abs(arr[0] - arr[idx]);
             System.out.println(s * s);
-
         }
-        
         scan.close();
     }
 }
