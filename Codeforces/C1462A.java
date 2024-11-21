@@ -14,15 +14,24 @@ public class C1462A {
         
         int t = scan.nextInt();
         while (t-- > 0) {
-           int n = scan.nextInt();
-           int[] arr = new int[n];
-           for (int i = 0; i < n; i++) {
-               arr[i] = scan.nextInt();
-           }
-           for (int i = 0; i < n; i++) {
-               if(i % 2 == 0)
-           }
-            
+            int n = scan.nextInt();
+            int[] arr = new int[n];
+            for (int i = 0; i < n; i++) {
+                arr[i] = scan.nextInt();
+            }
+            int fcnt = 0; 
+            int lcnt = n - 1;
+            for (int i = 0; i < n; i++) {
+                if(i % 2 == 0){
+                    System.out.print(arr[fcnt] + " ");
+                    fcnt++;
+                }
+                else{
+                    System.out.print(arr[lcnt] + " ");
+                    lcnt--;
+                }
+            }
+            System.out.println();
         }
         
         scan.close();
