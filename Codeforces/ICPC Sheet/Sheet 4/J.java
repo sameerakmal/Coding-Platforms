@@ -17,6 +17,7 @@ public class J {
         for(char c : s.toCharArray()){
             ans[c - 'a']++;
         }
+        
         for (int i = 0; i < 26; i++) {
            if(ans[i] > 0) {
                 System.out.println((char)(i + 'a')+ " : " + ans[i]);
