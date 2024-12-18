@@ -1,6 +1,5 @@
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.HashSet;
 import java.util.Scanner;
 
 public class GLPR157 {
@@ -12,28 +11,32 @@ public class GLPR157 {
         } catch (FileNotFoundException e) {
             scan = new Scanner(System.in);
         }
-        
         int t = scan.nextInt();
-		while(t-- > 0){
-		    int l1 = scan.nextInt();
-		    int l2 = scan.nextInt();
-		    
-		    String s1 = scan.next();
-		    String s2 = scan.next();
-		    
-		    HashSet h1 = new HashSet<>();
-		    HashSet h2 = new HashSet<>();
+        while (t-- > 0) {
+            int n = scan.nextInt();
+            int[] arr = new int[n];
+            for (int i = 0; i < n; i++) {
+                arr[i] = scan.nextInt();
+            }
 
-            for(char c : s1.toCharArray()){
-                h1.add(c);
+            boolean pass = false;
+            int cnt = 0;
+            while (!pass) {
+                pass = true;
+                for (int i = 0; i < n - 1; i++) {
+                    if (arr[i] < arr[i + 1]) {
+                        arr[i] = arr[i + 1];
+                        pass = false;
+                    }
+                }
+                if (!pass) {
+                    cnt++;
+                }
             }
-            for(char c : s2.toCharArray()){
-                h1.add(c);
-            }
-            System.out.println(h1);
-            if(h1.size() < 26) System.out.println("YES");
-            else System.out.println("NO");    
+            System.out.println(cnt);
         }
+        
+
         scan.close();
     }
 }
