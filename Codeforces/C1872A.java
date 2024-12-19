@@ -17,15 +17,8 @@ public class C1872A {
             int a = scan.nextInt();
             int b = scan.nextInt();
             int c = scan.nextInt();
-            int max = Math.max(a, b);
-            int min = Math.min(a,b);
-            int cnt = 0;
-            for (int i = 0; i < 100; i++) {
-                if(a - b <= c) break;
-                else{
-                    
-                }
-            }
+            int diff = Math.abs(a - b);
+            System.out.println(Math.ceil(diff/c));
         }
         
         scan.close();
